@@ -16,6 +16,7 @@ sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/li
 # Step 4: 更新并安装 Docker-CE
 sudo apt-get -y update
 sudo apt-get -y install docker-ce=17.03.2~ce-0~ubuntu-xenial
+#apt-cache madison docker-ce
 
 sudo mkdir -p /etc/docker
 sudo touch /etc/docker/daemon.json
