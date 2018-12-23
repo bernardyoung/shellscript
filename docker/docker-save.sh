@@ -9,9 +9,9 @@ for images in $(sudo docker images | awk '{print $1":"$2}' | grep -v TAG);
         images_tar=$images_tar.tar
         images_tar_gz=$images_tar.gz
         echo "正在打包镜像 $images >>>"
-        docker save $images > $images_tar  > /dev/null 2>&1
-        echo "正在压缩镜像 $images_tar >>>"
-        tar -czvf $images_tar_gz $images_tar > /dev/null 2>&1
+        docker save $images > $images_tar
+        echo "正在压缩镜像 $images >>>"
+        tar -czvf $images_tar_gz $images_tar
         echo "正在删除临时tar包 $images_tar >>>"
         rm -rf ./$images_tar
         i=$((i+1))
