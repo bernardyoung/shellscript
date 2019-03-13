@@ -33,7 +33,7 @@ function docker_install () {
   if [ $system == "Ubuntu" ]; then
     ubuntu_system_install
     ubuntu_docker_install
-    docker info
+    #docker info
   else
     centos_system_install
     centos_docker_install
@@ -82,10 +82,6 @@ function ubuntu_docker_install () {
 
   sudo mkdir -p /etc/docker
   sudo cp ./daemon.json /etc/docker/daemon.json
-
-  #docker info提示WARNING: No swap limit support
-  sudo sed -i 's/GRUB_CMDLINE_LINUX="/GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1  /g'  /etc/default/grub
-  sudo update-grub
 
   sudo systemctl daemon-reload
   sudo systemctl restart docker
