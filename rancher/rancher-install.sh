@@ -77,7 +77,7 @@ function ubuntu_docker_install () {
   sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
   # Step 4: 更新并安装 Docker-CE
   sudo apt-get -y update
-  sudo apt-get -y install docker-ce=17.03.2~ce-0~ubuntu-xenial --allow-downgrades
+  sudo apt-get -y install docker-ce=18.09.2~ce-0~ubuntu-xenial --allow-downgrades
   #apt-cache madison docker-ce
 
   sudo mkdir -p /etc/docker
