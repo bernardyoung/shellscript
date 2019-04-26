@@ -15,7 +15,7 @@ curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key a
 sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 # Step 4: 更新并安装 Docker-CE
 sudo apt-get -y update
-sudo apt-get -y install docker-ce=17.03.2~ce-0~ubuntu-xenial
+sudo apt-get -y install docker-ce=18.09.3~ce-0~ubuntu-xenial
 #apt-cache madison docker-ce
 
 sudo mkdir -p /etc/docker
